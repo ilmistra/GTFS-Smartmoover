@@ -40,7 +40,7 @@ $("#startTracking_start").live('click', function(){
     	// Success
         function(position){
             tracking_data.push(position);
-            $("#coords").html((Math.round(position.coords.latitude * 10000)/10000)+";"+(Math.round(position.coords.longitude * 10000)/10000)+";"+position.coords.accuracy);
+            $("#coords").html((Math.round(position.coords.latitude * 100000)/100000)+";"+(Math.round(position.coords.longitude * 100000)/100000)+";"+position.coords.accuracy);
         },
         
         // Error
