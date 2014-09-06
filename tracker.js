@@ -38,6 +38,9 @@ $("#startTracking_start").live('click', function(){
     	// Success
         function(position){
             tracking_data.push(position);
+            $("#lati").val(position.coords.latitude);
+            $("#longi").val(position.coords.longitude);
+            $("#accu").val(position.coords.accuracy);
         },
         
         // Error
