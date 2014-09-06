@@ -129,7 +129,7 @@ $('#track_info').live('pageshow', function(){
 	
 	// Get all the GPS data for the specific workout
 	var data = window.localStorage.getItem(key);
-	
+	alert(data);
 	// Turn the stringified GPS data back into a JS object
 	data = JSON.parse(data);
 
