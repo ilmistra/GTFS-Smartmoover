@@ -67,7 +67,7 @@ $("#startTracking_stop").live('click', function(){
 	
 	// Save the tracking data
 	window.localStorage.setItem(track_id, JSON.stringify(tracking_data));
-	alert(JSON.stringify(tracking_data));
+	//alert(JSON.stringify(tracking_data));
 
 	// Reset watch_id and tracking_data 
 	watch_id = null;
@@ -76,7 +76,7 @@ $("#startTracking_stop").live('click', function(){
 	// Tidy up the UI
 	$("#track_id").val("").show();
 	
-	$("#startTracking_status").html("Stopped tracking workout: <strong>" + track_id + "</strong>");
+	$("#startTracking_status").html("Stopped capturing: <strong>" + track_id + "</strong>");
 
 });
 
