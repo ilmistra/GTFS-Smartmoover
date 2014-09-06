@@ -1,3 +1,7 @@
+var track_id = '';      // Name/ID of the exercise
+var watch_id = null;    // ID of the geolocation
+var tracking_data = []; // Array containing GPS position objects
+
 function gps_distance(lat1, lon1, lat2, lon2)
 {
 	// http://www.movable-type.co.uk/scripts/latlong.html
@@ -26,9 +30,6 @@ document.addEventListener("deviceready", function(){
 });
 
 
-var track_id = '';      // Name/ID of the exercise
-var watch_id = null;    // ID of the geolocation
-var tracking_data = []; // Array containing GPS position objects
 
 $("#startTracking_start").live('click', function(){
     
@@ -67,10 +68,11 @@ $("#startTracking_stop").live('click', function(){
 	
 	// Save the tracking data
 	window.localStorage.setItem(track_id, JSON.stringify(tracking_data));
+	alert(JSON.stringify(tracking_data));
 
 	// Reset watch_id and tracking_data 
-	var watch_id = null;
-	var tracking_data = null;
+	watch_id = null;
+	tracking_data = null;
 
 	// Tidy up the UI
 	$("#track_id").val("").show();
