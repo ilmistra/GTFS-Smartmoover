@@ -191,6 +191,9 @@ $('#track_info').live('pageshow', function(){
     // Apply the line to the map
     trackPath.setMap(map);
     
-	} //end se vuoto
+	} else {
+		
+		$("#track_info_info").html('Empty capture !');
+	}//end se vuoto
 		
 });
