@@ -128,8 +128,9 @@ $('#track_info').live('pageshow', function(){
 	
 	// Get all the GPS data for the specific workout
 	var data = window.localStorage.getItem(key);
-	alert(data);
+	//alert(data);
 	// Turn the stringified GPS data back into a JS object
+	if (data!=null) {
 	data = JSON.parse(data);
 
 	// Calculate the total distance travelled
@@ -189,6 +190,7 @@ $('#track_info').live('pageshow', function(){
 
     // Apply the line to the map
     trackPath.setMap(map);
-   
+    
+	} //end se vuoto
 		
 });
