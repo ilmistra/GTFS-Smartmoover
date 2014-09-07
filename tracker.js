@@ -130,7 +130,7 @@ $('#track_info').live('pageshow', function(){
 	var data = window.localStorage.getItem(key);
 	//alert(data);
 	// Turn the stringified GPS data back into a JS object
-	if (data!=null) {
+	if (data !== null && data !== undefined) {
 	data = JSON.parse(data);
 
 	// Calculate the total distance travelled
