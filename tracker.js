@@ -32,7 +32,7 @@ document.addEventListener("deviceready", function(){
 
 
 $("#startTracking_start").live('click', function(){
-    if ($("#track_id").val()=='') {$("#track_id").val('Corsa '+(window.localStorage.length+1));}
+    if ($("#track_id").val()=='') {$("#track_id").val('Corsa '+(window.localStorage.length));}
     $('#startTracking_start').data('disabled',true);
 	// Start tracking the User
     watch_id = navigator.geolocation.watchPosition(
